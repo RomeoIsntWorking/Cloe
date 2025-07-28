@@ -5,14 +5,15 @@ description = "Manga OCR snipping tool"
 authors = ["Alarcon Ace Belen"]
 license = "GPL-3.0-only"
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = ">=3.8,<3.10"
 pyqt5 = "^5.15.7"
-pillow = "^9.3.0"
-manga-ocr = "^0.1.8"
+pillow = "^10.0.0"
+manga-ocr = "^0.1.14"
 pynput = "^1.7.6"
-huggingface-hub = "0.7.0"
+huggingface-hub = "0.34.1"
 
 
 [tool.poetry.group.dev.dependencies]
