@@ -21,7 +21,7 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QColor, QPainter, QPaintEvent, QPen, QResizeEvent
 from PyQt5.QtWidgets import QLabel, QGridLayout, QWidget
 
-from components.misc import RubberBand
+from app.components.misc import RubberBand
 
 
 class Preview(QWidget):

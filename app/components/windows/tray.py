@@ -23,10 +23,10 @@ from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QApplication, QMenu, QSystemTrayIcon
 
 from .external import ExternalWindow
-from components.popups import AboutPopup
-from components.services import BaseWorker, Hotkeys
-from components.settings import SettingsMenu
-from utils.constants import (
+from app.components.popups import AboutPopup
+from app.components.services import BaseWorker, Hotkeys
+from app.components.settings import SettingsMenu
+from app.utils.constants import (
     ABOUT_ICON,
     APP_LOGO,
     EXIT_ICON,

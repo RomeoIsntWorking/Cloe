@@ -22,7 +22,7 @@ from PyQt5.QtWidgets import QGridLayout, QWidget
 
 from ..tab import BaseSettingsTab
 from .container import HotkeyContainer
-from utils.constants import HOTKEY_CONFIG
+from app.utils.constants import HOTKEY_CONFIG
 
 
 class HotkeySettingsTab(BaseSettingsTab):

@@ -22,7 +22,7 @@ from typing import Any, Callable
 from PyQt5.QtCore import QSettings
 from PyQt5.QtWidgets import QWidget
 
-from components.popups import BasePopup
+from app.components.popups import BasePopup
 
 
 class BaseSettings(QWidget):

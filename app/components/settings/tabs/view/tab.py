@@ -33,7 +33,7 @@ from PyQt5.QtWidgets import (
 from ..tab import BaseSettingsTab
 from .container import ViewContainer
 from .preview import Preview
-from utils.constants import VIEW_CONFIG
+from app.utils.constants import VIEW_CONFIG
 
 
 class ViewSettingsTab(ViewContainer, BaseSettingsTab):

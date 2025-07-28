@@ -21,9 +21,9 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QColor, QMouseEvent
 from PyQt5.QtWidgets import QWidget
 
-from components.settings import ViewContainer
+from app.components.settings import ViewContainer
 from .base import BaseOCRView
-from utils.scripts import colorToRGBA
+from app.utils.scripts import colorToRGBA
 
 
 class FullScreenView(BaseOCRView, ViewContainer):

@@ -18,7 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 
 from .base import BasePopup
-from utils.constants import ABOUT_MESSAGE, APP_NAME
+from app.utils.constants import ABOUT_MESSAGE, APP_NAME
 
 
 class AboutPopup(BasePopup):

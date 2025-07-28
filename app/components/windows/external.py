@@ -23,7 +23,7 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QCloseEvent, QCursor
 from PyQt5.QtWidgets import QApplication, QDesktopWidget, QMainWindow
 
-from components.views import FullScreenView
+from app.components.views import FullScreenView
 
 if TYPE_CHECKING:
     from .tray import SystemTray

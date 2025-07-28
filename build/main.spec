@@ -45,7 +45,7 @@ pyz = PYZ(a.pure, a.zipped_data,
 
 PATH_TO_TORCH_LIB = "torch\\lib\\"
 excluded_files  = [
-  'asmjit.lib', 
+  'asmjit.lib',
   'c10.lib',
   'clog.lib',
   'cpuinfo.lib',
@@ -78,7 +78,7 @@ a.datas = [x for x in a.datas if not x[0] in excluded_files]
 
 
 exe = EXE(pyz,
-          a.scripts, 
+          a.scripts,
           [],
           exclude_binaries=True,
           name='Cloe',
@@ -95,7 +95,7 @@ exe = EXE(pyz,
 coll = COLLECT(exe,
                a.binaries,
                a.zipfiles,
-               a.datas, 
+               a.datas,
                strip=False,
                upx=True,
                upx_exclude=[],

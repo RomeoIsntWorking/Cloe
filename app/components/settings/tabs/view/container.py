@@ -23,8 +23,8 @@ from PyQt5.QtGui import QColor, QFont
 from PyQt5.QtWidgets import QWidget
 
 from ..base import BaseSettings
-from utils.constants import VIEW_DEFAULT, VIEW_CONFIG
-from utils.scripts import colorToRGBA
+from app.utils.constants import VIEW_DEFAULT, VIEW_CONFIG
+from app.utils.scripts import colorToRGBA
 
 
 class ViewContainer(BaseSettings):
