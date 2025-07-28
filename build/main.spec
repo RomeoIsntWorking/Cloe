@@ -5,6 +5,8 @@ from PyInstaller.utils.hooks import copy_metadata
 datas = []
 datas += collect_data_files('unidic_lite')
 datas += collect_data_files('manga_ocr')
+datas += collect_data_files('transformers')
+datas += collect_data_files('huggingface_hub')
 datas += copy_metadata('tqdm')
 datas += copy_metadata('regex')
 datas += copy_metadata('requests')
@@ -12,14 +14,15 @@ datas += copy_metadata('packaging')
 datas += copy_metadata('filelock')
 datas += copy_metadata('numpy')
 datas += copy_metadata('tokenizers')
+datas += copy_metadata('transformers')
+datas += copy_metadata('huggingface_hub')
+datas += copy_metadata('manga_ocr')
 
 local_files = [
   ('../app/assets', './assets')
 ]
 
-
 block_cipher = None
-
 
 a = Analysis(['../app/main.py'],
              pathex=['../app'],
@@ -29,7 +32,14 @@ a = Analysis(['../app/main.py'],
               'pynput.keyboard._xorg',
               'pynput.mouse._xorg',
               'pynput.keyboard._win32',
-              'pynput.mouse._win32'
+              'pynput.mouse._win32',
+              'transformers',
+              'transformers.models',
+              'transformers.models.auto',
+              'manga_ocr',
+              'huggingface_hub',
+              'torch',
+              'tokenizers'
             ],
              hookspath=[],
              hooksconfig={},
@@ -39,9 +49,9 @@ a = Analysis(['../app/main.py'],
              win_private_assemblies=False,
              cipher=block_cipher,
              noarchive=False)
+
 pyz = PYZ(a.pure, a.zipped_data,
              cipher=block_cipher)
-
 
 PATH_TO_TORCH_LIB = "torch\\lib\\"
 excluded_files  = [
@@ -76,7 +86,6 @@ excluded_files  = [
 excluded_files = [PATH_TO_TORCH_LIB + x for x in excluded_files]
 a.datas = [x for x in a.datas if not x[0] in excluded_files]
 
-
 exe = EXE(pyz,
           a.scripts,
           [],
@@ -92,6 +101,7 @@ exe = EXE(pyz,
           codesign_identity=None,
           entitlements_file=None,
           icon="../app/assets/images/icons/logo.ico")
+
 coll = COLLECT(exe,
                a.binaries,
                a.zipfiles,
