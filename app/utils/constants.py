@@ -17,22 +17,34 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 
+import os
+import sys
 from PyQt5.QtGui import QColor, QFont
 
 # ------------------------------------- General ------------------------------------- #
 
+def resource_path(relative_path):
+    """Get absolute path to resource, works for dev and for PyInstaller"""
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+    
+    return os.path.join(base_path, relative_path)
+
 APP_NAME = "Cloe"
 
 # Icons
-APP_LOGO = "./assets/images/icons/logo.ico"
-SETTINGS_ICON = "./assets/images/icons/settings.png"
-ABOUT_ICON = "./assets/images/icons/about.png"
-EXIT_ICON = "./assets/images/icons/exit.png"
+APP_LOGO = resource_path("assets/images/icons/logo.ico")
+SETTINGS_ICON = resource_path("assets/images/icons/settings.png")
+ABOUT_ICON = resource_path("assets/images/icons/about.png")
+EXIT_ICON = resource_path("assets/images/icons/exit.png")
 
 # Styles
-STYLESHEET_LIGHT = "./assets/styles.qss"
-STYLESHEET_DARK = "./assets/styles-dark.qss"
-STYLESHEET_DEFAULT = "./assets/styles.qss"
+STYLESHEET_LIGHT = resource_path("assets/styles.qss")
+STYLESHEET_DARK = resource_path("assets/styles-dark.qss")
+STYLESHEET_DEFAULT = resource_path("assets/styles.qss")
 
 # ------------------------------------- Settings ------------------------------------ #
 
