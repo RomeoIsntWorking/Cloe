@@ -24,7 +24,7 @@ https://user-images.githubusercontent.com/45705751/166183555-ef11bf64-9cea-4c04-
 Launch the application and wait for the model to load. Show the snipping window using shortcut `Alt+Q` and drag and hold the mouse cursor to start performing OCR.
 
 ### Installation <a name = "installation"></a>
-Download the latest zip file [here](https://github.com/bluaxees/Cloe/releases/latest/). Decompress the file in the desired directory. Make sure that the `app` folder is in the same folder as the shortcut `Cloe`.
+Download the latest zip file [here](https://github.com/romeoisntworking/Cloe/releases). Decompress the file in the desired directory. Make sure that the `app` folder is in the same folder as the shortcut `Cloe`.
 
 ### System Requirements
 
